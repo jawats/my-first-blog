@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'sideHustle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycpog2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sideHustle',
         'USER': 'jon_w',
         'PASSWORD': 'amvd53',
@@ -130,18 +130,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
-#STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-
-# Extra places for collectstatic to find static files.
-#STATICFILES_DIRS = (
-#    os.path.join(PROJECT_ROOT, 'static'),
-#)
-
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
