@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'sideHustle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycpog2',
         'NAME': 'sideHustle',
         'USER': 'jon_w',
         'PASSWORD': 'amvd53',
